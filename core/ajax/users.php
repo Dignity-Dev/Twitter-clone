@@ -77,7 +77,7 @@ if ($flag) {
                       <?= $user_follow ? 'following' : 'follow' ?>"
                       data-follow="<?php echo $user->user_id; ?>"
                       data-user="<?php echo $user_id; ?>"
-                      data-profile="<?php echo $u_id; ?>">
+                      data-profile="<?php isset($u_id) ? $u_id : $user->id; ?>">
                       <?php if($user_follow) { ?>
                         Following 
                       <?php } else {  ?>  

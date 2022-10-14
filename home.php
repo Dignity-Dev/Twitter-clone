@@ -341,7 +341,7 @@
                       <?= $user_follow ? 'following' : 'follow' ?>"
                       data-follow="<?php echo $user->id; ?>"
                       data-user="<?php echo $user_id; ?>"
-                      data-profile="<?php echo $u_id; ?>"
+                      data-profile="<?php isset($u_id) ? $u_id : $user->id; ?>"
                       style="font-weight: 700;">
                       <?php if($user_follow) { ?>
                         Following 
